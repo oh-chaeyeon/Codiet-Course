@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import ProductList from "./ProductList";
 
 export default function SearchForm({ initialValue = "" }) {
   const router = useRouter();
@@ -23,6 +24,7 @@ export default function SearchForm({ initialValue = "" }) {
     <form onSubmit={handleSubmit}>
       <input name="q" value={value} onChange={handleChange} />
       <button>검색</button>
+      <ProductList />
     </form>
   );
 }
